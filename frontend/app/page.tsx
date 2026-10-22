@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Star, ThumbsUp, ThumbsDown, PlayCircle, Info, ChevronRight, Check } from "lucide-react";
 import { getMoviePoster } from "../src/lib/tmdb";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://movie-saint.onrender.com";
 
 const HERO_BACKGROUNDS = [
   { url: "https://image.tmdb.org/t/p/original/xJHokMbljvjEVAZS3xOMIQWTgEs.jpg", label: "Interstellar (2014)" },
