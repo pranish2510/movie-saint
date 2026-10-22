@@ -88,7 +88,7 @@ export default function Home() {
       setMovies(hydrated);
 
       const genreCounts: Record<string, number> = {};
-      hydrated.forEach(m => m.genres.split('|').forEach(g => genreCounts[g] = (genreCounts[g] || 0) + 1));
+      hydrated.forEach(m => m.genres.split('|').forEach((g: string) => genreCounts[g] = (genreCounts[g] || 0) + 1))
       const topGenres = Object.entries(genreCounts).sort((a, b) => b[1] - a[1]).slice(0, 2).map(x => x[0]).join(" & ");
       setUserInsight(`Based on User ${userId}'s historical ratings, the ALS model identified a strong affinity for ${topGenres}. The matrix factorized these unseen movies as the highest probable matches.`);
       
@@ -116,7 +116,7 @@ export default function Home() {
 
   const toggleGenre = (genre: string) => {
     setSelectedGenres(prev => 
-      prev.includes(genre) ? prev.filter(g => g !== genre) : [...prev, genre]
+      prev.includes(genre) ? prev.filter((g: string) => g !== genre) : [...prev, genre]
     );
   };
 
@@ -126,7 +126,7 @@ export default function Home() {
     
     try {
       const token = process.env.NEXT_PUBLIC_TMDB_TOKEN;
-      const genreIds = selectedGenres.map(g => GENRE_MAP[g]).join('%7C'); // TMDB OR operator
+      const genreIds = selectedGenres.map((g: string) => GENRE_MAP[g]).join('%7C'); // TMDB OR operator
       
       let fetchedMovies = [];
       if (token) {
