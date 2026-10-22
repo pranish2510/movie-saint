@@ -1,0 +1,24 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Data & Output (never commit heavy data/secrets)
+data/
+reports/*.json
+reports/*.png
+.env
+.env.*
+!.env.example
+
+# OS specific
+.DS_Store
+Thumbs.db

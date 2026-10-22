@@ -1,0 +1,33 @@
+# =========================
+# 1. SECRETS (CRITICAL)
+# =========================
+.env
+.env.*
+*.pem
+
+# =========================
+# 2. PYTHON / FASTAPI
+# =========================
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# =========================
+# 3. NEXT.JS / FRONTEND
+# =========================
+node_modules/
+.next/
+out/
+build/
+npm-debug.log*
+.vercel
+
+# =========================
+# 4. OS CLUTTER
+# =========================
+.DS_Store
+Thumbs.db
